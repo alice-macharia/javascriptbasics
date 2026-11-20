@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Functions</title>
+</head>
+<body>
+<h1>Functions</h1>
+
+
+<script>
+    function great(){
+        alert("Hello World!")
+
+    }
+
+    // great();
+    function add(a, b){
+        return a + b;
+    }
+
+    function greeting (name = "Geust"){
+        alert(`Hello ${name} `)
+
+    }
+    // alert(add(1,2));
+    // greeting()
+    // greeting('Halima')
+
+    const multiply = function(a, b){
+        return a* b;
+    }
+    // alert(multiply(1,2))
+
+    //Arrow function
+    const areaCircle = (r) => 22/7 * r**2;
+
+    alert(areaCircle(7));
+
+
+    let scores =[56,67,80,90,28,65,73,40]
+    let new_scores= scores.map((score) =>score+2)
+    function addByTwo(value){
+        return value+2
+    }
+    console.log(score.map(addByTwo))
+    const addByThree = (a) => a+3
+    console.log(addByThree(addByTwo))
+
+    let result = scores.filter((score) => score > 65)
+    console.log(result)
+
+    console.log(scores.find((n) => n > 80)) //find first value above 80
+
+    let new_result = scores.filter((score) => score < 80).map((score) => score + 10)
+    console.log(new_result)
+</script>
+</body>
+</html>

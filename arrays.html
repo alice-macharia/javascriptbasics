@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Arrays</title>
+</head>
+<body>
+
+
+<script>
+    let fruits = ["Apples", "Bananas", "Orange", "Watermelon"];
+    let obj1={name:"John", age:25, gender:"male"};
+    let obj2={name:"Alice", age:25 , gender:"female"};
+    let people = [obj1,obj2]
+    console.log(people);
+
+
+
+    console.log(fruits.length)
+    fruits.push("Passion") //adds at the end
+    fruits.pop()  //removes last item
+    console.log(fruits)
+
+
+    console.log(people[0])
+
+    for( const fruit of fruits ) {
+        console.log(fruit);
+    }
+    fruits.forEach((fruit) => {console.log(fruit);})
+</script>
+</body>
+</html>

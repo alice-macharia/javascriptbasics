@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ES 6</title>
+</head>
+<body>
+<script>
+    let x = 10 //var x= 10
+    const PI = 22/7
+    // console.log(`${x} PI is ${PI}`)
+
+    const add = (x, y) => x+y
+
+    function multiply(x, y) {
+        return x * y
+    }
+
+    // console.log(multiply(2, 3))
+
+    //destructuring //unpack values
+    const patient ={
+        name: "John",
+        dob: "18/12/1998",
+        gender: "Male",
+    }
+    // console.log(patient.name)
+
+    // let name = patient.name
+    // let dob = patient.dob
+    // let gender = patient.gender
+    // console.log(name)
+
+    const{name, dob, gender} = patient
+    // console.log (`Patient name is ${name} and gender is ${gender}`)
+
+
+    let details=["John", "Miriam"]
+    let [name1, name2] = details
+//default parameter
+    function divide(a,b=2, rounded=false){
+        let res = a/b
+        if (rounded ===true){
+            return Math.round(res)
+        }
+        return res
+    }
+    let res1 = divide (10,3,true)
+    let res2 = divide (10,3)
+
+    // console.log(res1,res2)
+
+//spread operator
+    function flexibleAdd(...numbers){
+        let total = 0
+        for(let  value of numbers){
+            total += value
+        }
+        return total
+
+    }
+       // console.log(flexibleAdd(10, 20, 30, 10))
+
+    let people=["John","Miriam","Doe"]
+    let others=["Jeremy","Jack"]
+
+    let merged=[...people,...others]
+    // console.log(merged)
+
+    let data=[...people,"Hilda","Alice"]
+    console.log(merged)
+
+    //modules--files
+
+</script>
+
+<script src="js/main.js"></script>
+</body>
+</html>
